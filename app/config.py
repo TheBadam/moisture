@@ -20,7 +20,7 @@ class Config():
         self.PORT = os.getenv("PORT", 9000)
         self.MOISTURE_URL = os.getenv("MOISTURE_URL")
 
-        self.INTERVAL = 60*60*1
+        self.INTERVAL = int(os.getenv("INTERVAL", 60*60*2))
         self.READINGS = 30
 
 config =  Config()

@@ -137,4 +137,4 @@ if __name__ == "__main__":
         render_chart(results)
         return FileResponse(config.CHART_FILE)
 
-    uvicorn.run(app, port=config.PORT)
+    uvicorn.run(app, host="0.0.0.0", port=config.PORT)

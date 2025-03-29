@@ -1,0 +1,9 @@
+services:
+  plants:
+    build: .
+    ports:
+      - 9000:9000
+    volumes:
+      - /home/adamb/data:/db
+    env_file: .envdocker
+    restart: unless-stopped

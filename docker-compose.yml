@@ -4,6 +4,6 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - /home/adamb/data:/db
+      - ${DATA_LOC}:/db
     env_file: .envdocker
     restart: unless-stopped

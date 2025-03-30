@@ -1,3 +1,4 @@
 DB_FILE=/db/moisture.db
 MOISTURE_URL=http://192.168.1.119:8080
 CHART_FILE=./moisture.svg
+DATA_LOC=/home/adamb/data

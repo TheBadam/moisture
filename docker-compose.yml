@@ -5,5 +5,5 @@ services:
       - ${PUBLISH_PORT}:9000
     volumes:
       - ${DATA_LOC}:/db
-    env_file: .envdocker
+    env_file: docker.env
     restart: unless-stopped

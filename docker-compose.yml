@@ -5,5 +5,10 @@ services:
       - ${PUBLISH_PORT}:9000
     volumes:
       - ${DATA_LOC}:/db
+    environment:
+      - DB_FILE=${DB_FILE}
+      - MOISTURE_URL=${MOISTURE_URL}
+      - CHART_FILE=${CHART_FILE}
+    # Running locally with env file please comment whole `environment` section
     # env_file: docker.env
     restart: unless-stopped

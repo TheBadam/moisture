@@ -1,10 +1,8 @@
-from dotenv import load_dotenv
 import os
 
 
 class Config:
     def __init__(self):
-        load_dotenv()
         self.DB_FILE = os.getenv("DB_FILE")
         self.CHART_FILE = os.getenv("CHART_FILE")
         self.INTERVAL = 60 * 60 * 1

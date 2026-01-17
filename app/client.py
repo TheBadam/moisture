@@ -11,7 +11,7 @@ def fetch_moisture_reading() -> MoistureDto:
         response = requests.get(config.MOISTURE_URL)
         response.raise_for_status()
         data = response.json()
-        moisture = MoistureDto("Monstera", data["moisture"])
+        moisture = MoistureDto("Monstera", data["moisture"]["value"])
     except requests.RequestException as e:
         print(f"Request failed: {e}")
     return moisture

@@ -53,7 +53,7 @@ if __name__ == "__main__":
             return {"message": "No data available"}
 
     @app.get("/chart", response_class=FileResponse)
-    def get_moisture(n_readings: int = config.DEFAULT_READINGS):
+    def get_moisture_chart(n_readings: int = config.DEFAULT_READINGS):
         """Retrieve the latest moisture data from the database."""
         results = get_stored_moisture(n_readings)
         render_chart(results)

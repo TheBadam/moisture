@@ -1,18 +1,19 @@
 import requests
+from requests.exceptions import RequestException
 import time
 from db import store
 from schema import MoistureDto
 from config import config
 
 
-def fetch_moisture_reading() -> MoistureDto:
+def fetch_moisture_reading() -> MoistureDto | None:
     moisture = None
     try:
         response = requests.get(config.MOISTURE_URL)
         response.raise_for_status()
         data = response.json()
         moisture = MoistureDto("Monstera", data["moisture"]["value"])
-    except requests.RequestException as e:
+    except RequestException as e:
         print(f"Request failed: {e}")
     return moisture
 

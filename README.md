@@ -9,6 +9,9 @@ DB folder must exist, DB file will be created if not exists.
 
 - DB_FILE=*location of db file*
 - MOISTURE_URL=*address of moisture service*
-- CHART_FILE=*location of generated chart*
+- CHART_FILE=*full path for generated chart, SVG*
+
+**DOCKER:** 
+
 - DATA_LOC=*path to DB folder, mapped for volume on docker host*
 - PUBLISH_PORT=*host port the container port is mapped to*

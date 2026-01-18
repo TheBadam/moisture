@@ -218,3 +218,4 @@ __marimo__/
 #vs-code
 .vscode
 /pico/connection.py
+*.env
